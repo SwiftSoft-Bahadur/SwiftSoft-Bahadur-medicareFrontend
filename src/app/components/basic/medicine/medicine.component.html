@@ -1,0 +1,98 @@
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card my-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>
+                                <small>
+                                    <b>&nbsp;&nbsp;Medicine</b>
+                                </small>
+                            </h4>
+                        </div> <!-- end col-->
+                        <div class="col-md-6 d-flex justify-content-end">
+                            <a (click)="back()" routerLink="/medicine" class="btn btn-md text-lg btn-primary">
+                                <i class="fas fa-arrow-left"></i> &nbsp;Back
+                            </a>
+                            &nbsp;&nbsp;
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <form [formGroup]="medicineForm" (ngSubmit)="onSubmit()">
+                    <!-- medicineName input -->
+                    <!-- Medium input -->
+                    <div class="md-form">
+                        <input type="text" id="inputMDEx" name="medicineName" formControlName="medicineName"
+                            class="form-control">
+                        <label for="inputMDEx">Name</label>
+                        <!-- Validation alert message -->
+                        <div class="alert alert-danger" role="alert" *ngIf="medicineForm.get('medicineName').touched && medicineForm.get('medicineName').invalid">
+                            Name is required and minLength is 3
+                        </div>
+                    </div>
+
+                    <!-- medicineCompany input -->
+                    <div class="md-form">
+                        <input type="text" id="inputMDEx" name="medicineCompany" formControlName="medicineCompany"
+                            class="form-control">
+                        <label for="inputMDEx">Company</label>
+                    </div>
+
+                    <!-- medicinePrice input -->
+                    <div class="md-form">
+                        <input type="text" name="medicinePrice" formControlName="medicinePrice" class="form-control">
+                        <label for="inputMDEx">Price</label>
+                    </div>
+
+                    <!-- medicineQty input -->
+                    <div class="md-form">
+                        <input type="text" name="medicineQty" formControlName="medicineQty" class="form-control">
+                        <label for="inputMDEx">Quantity</label>
+                    </div>
+                    <!-- expiry input -->
+                    <div class="md-form">
+                        <input type="text" name="expiry" formControlName="expiry" class="form-control">
+                        <label for="inputMDEx">Expiry</label>
+                    </div>
+
+                    <!-- medicineImg input -->
+                    <!-- <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" 
+                            name="image" formControlName="medicineImg"
+                                aria-describedby="inputGroupFileAddon01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                    </div> -->
+
+                    <div class="md-form">
+                        <input type="text" name="medicineImg" formControlName="medicineImg" class="form-control">
+                        <label for="inputMDEx">Image</label>
+                    </div>
+
+                    <br>
+                    <!-- Submit button -->
+                    <input  type="submit" value="Send" class="btn btn-primary btn-block mb-4">
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

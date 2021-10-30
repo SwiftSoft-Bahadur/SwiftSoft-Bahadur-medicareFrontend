@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center pt-5 mt-md-5">
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="text-center border border-light p-3">
+
+        <p class="h4 mb-4 text-center">Register</p>
+
+
+        <!-- Material input -->
+        <div class="md-form ">
+
+            <i class="fas fa-envelope  prefix d-flex justify-content-start"></i>
+            <input type="text" class="form-control mb-4" name="email" #email="ngModel" [(ngModel)]="loginObj.email"
+                placeholder="Email" required>
+            <small *ngIf="email.invalid && email.touched" class="d-flex alert alert-danger" role="alert">Email is
+                required</small>
+        </div>
+
+        <!-- Material input -->
+        <div class="md-form ">
+            <i class="fas fa-lock prefix d-flex justify-content-start"></i>
+            <input type="text" class="form-control mb-4" name="password" #password="ngModel"
+                [(ngModel)]="loginObj.password" placeholder="Password" required>
+            <small *ngIf="password.invalid && password.touched" class="d-flex alert alert-danger" role="alert">Password
+                is
+                required</small>
+        </div>
+
+        <!-- Material input -->
+        <div class="md-form ">
+
+            <i class="fas fa-user prefix d-flex justify-content-start"></i>
+            <input type="text" class="form-control mb-4" name="name" minlength="4" #name="ngModel"
+                [(ngModel)]="loginObj.name" placeholder="name" required>
+            <small *ngIf="name.invalid && name.touched " class="d-flex alert alert-danger" role="alert">Name is
+                required and minlength 5</small>
+
+        </div>
+        <button class="btn btn-info btn-block my-4 me_rounded" type="submit">Register</button>
+
+        <div class="d-flex justify-content-end">
+            <p>Have a member?
+                <a routerLink="/login" routerLinkActive="router-link-active">Login</a>
+            </p>
+
+        </div>
+    </form>
+</div>
