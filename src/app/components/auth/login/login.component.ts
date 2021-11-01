@@ -30,8 +30,9 @@ export class LoginComponent implements OnInit {
     this.loginObj.name = loginObj?.name;
 
     let userExist = this._sessionService.getUser();
+    
     if (userExist) {
-      this._router.navigate(['/home']);
+      this._router.navigate(['/dashboard']);
     }
   }
 
@@ -41,7 +42,7 @@ export class LoginComponent implements OnInit {
         //store token on localStorage onLogin
         let ResObj: any = { name: res.user.name, token: res.token }
         this._sessionService.setUser(ResObj);
-        window.location.href = "/home";
+        window.location.href = "/dashboard";
       },
       err => {
         if (err.status == 401) {
