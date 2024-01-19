@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class MedicineService {
 
   //Online url
-  private BASE_URL = "http://localhost:8080/api/medicine";
+  private BASE_URL = "http://192.168.147.125:3000/api/medi";
 
   constructor(private _http: HttpClient) { }
 

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AuthService {
 
   // private AUTH_URL = "https://task-tracker-backend-side.herokuapp.com/api/auth";
-  private AUTH_URL = "http://localhost:8080/api/auth";
+  private AUTH_URL = "http://192.168.147.125:3000/api/auth";
 
   constructor(private _http: HttpClient) { }
 
