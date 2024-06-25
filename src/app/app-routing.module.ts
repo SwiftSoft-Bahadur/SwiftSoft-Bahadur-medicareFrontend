@@ -1,4 +1,3 @@
-import { FourOfourComponent } from './components/basic/four-ofour/four-ofour.component';
 import { EmployeeComponent } from './components/basic/employee/employee.component';
 import { MainComponent } from './components/basic/main/main.component';
 import { SignUpComponent } from './components/auth/sign-up/sign-up.component';
@@ -19,7 +18,6 @@ const routes: Routes = [
   },
   { path: 'employee', component: EmployeeComponent },
   { path: 'medicine', component: MedicineComponent },
-  { path: '**', component: FourOfourComponent },
 
 ];
 

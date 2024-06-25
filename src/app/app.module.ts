@@ -15,7 +15,6 @@ import { MainComponent } from './components/basic/main/main.component';
 import { HeaderComponent } from './components/basic/header/header.component';
 import { EmployeeComponent } from './components/basic/employee/employee.component';
 import { UpdateMedicineComponent } from './components/basic/update-medicine/update-medicine.component';
-import { FourOfourComponent } from './components/basic/four-ofour/four-ofour.component';
 import { CartComponent } from './components/basic/cart/cart.component';
 
 @NgModule({
@@ -30,7 +29,6 @@ import { CartComponent } from './components/basic/cart/cart.component';
     HeaderComponent,
     EmployeeComponent,
     UpdateMedicineComponent,
-    FourOfourComponent,
     CartComponent,
   ],
   imports: [
